@@ -1,0 +1,154 @@
+<cfparam name="url.e" default="0">
+<!--- Meeting Code: This could get passed via the url from an email--->
+<cfparam name="url.M" default="">
+
+<!--- PHID: This could get passed via the url from an email---> 
+<cfparam name="url.P" default="">
+
+<cfparam name="attributes.siteType" default="P">
+
+<cfparam name="attributes.logoDisplay" default="M">
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<title>Healthcare Discussions</title>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<style type="text/css">
+	  .TopMast{
+	  	background-image: url('/images/topMast.gif');
+	  	background-repeat: repeat-y;
+	  }
+	  .bottomMast{
+	  	background-image: url('/images/bottomMast.gif');
+	  	background-repeat: repeat-x;
+
+	  }
+	  .copyright{
+	  	font-size: 10px;
+	  	font-family: verdana, arial, courier;
+	  	padding-bottom: 10px;
+	  	padding-left: 5px;
+	  	padding-top: 10px;
+	  	color: #ffffff;
+	  }
+	  .mainView{
+	  	font-size: 11px;
+	  	font-family: verdana, arial, courier;
+	  	padding-left: 20px;
+	  	padding-right: 10px;
+	  	overflow: scroll;
+	  }
+	  td{
+	   font-family: verdana, arial, courier;
+	   font-size: 11px;
+	  }
+	  H3{
+	  	font-size: 14px;
+	  	font-family: arial,verdana,  courier;
+	  	color: #006699;
+	  }
+</style>
+</head>
+
+<body topmargin="0">
+<table border="0" cellpadding="0" cellspacing="0" width="800" align="center">
+  <tr>
+    <td>
+	  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+	     <tr>
+	        <td class="topMast" background="/images/topmast.gif">
+			  <table border="0" cellpadding="0" cellspacing="0"align="right">
+                <tr>
+                   <td align="right"><a href="/index.cfm"><img src="/images/MainHDLogo.gif" alt="Healthcare Discussions is brought to you by Pharmakon, LLC., A PDI Company." border="0"></a></td>
+                </tr>
+              </table>           
+			</td>
+	     </tr>
+	     <tr>
+	        <td><img src="/images/LightTanMast.gif" width="800" height="21" alt="" border="0"></td>
+	     </tr>
+	  </table>
+	  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tr>
+		   <cfswitch expression="#Attributes.logoDisplay#">
+		     <cfcase value="M">
+			    <td><a href="index.cfm"><img src="/images/pharmakon_top.jpg" width="418" height="65" alt="PharmakonDocs" border="0"></a></td>
+			 </cfcase>
+			 <cfcase value="G">
+			    <td><a href="index.cfm"><img src="/images/GroupDyn_top.jpg" width="418" height="65" alt="Group Dynamics, LLC." border="0"></a></td>
+			 </cfcase>
+			 <cfcase value="S">
+			    <td><a href="index.cfm"><img src="/images/sharecom_top.jpg" width="418" height="65" alt="Sharecom, LLC." border="0"></a></td>
+			 </cfcase>
+			 <cfcase value="V">
+			    <td><a href="index.cfm"><img src="/images/vistacom_top.jpg" width="418" height="65" alt="Vistacom, LLC." border="0"></a></td>
+			 </cfcase>
+			 <cfcase value="C">
+			    <td><a href="index.cfm"><img src="/images/cbeck_top.jpg" width="418" height="65" alt="C. Beck & Associates, LLC." border="0"></a></td>
+			 </cfcase>
+			 <cfcase value="O">
+			    <td><a href="index.cfm"><img src="/images/mod_top.jpg" width="418" height="65" alt="C. Beck & Associates, LLC." border="0"></a></td>
+			 </cfcase>
+			 
+			 <cfdefaultcase>
+			    <td><a href="index.cfm"><img src="/images/pharmakon_top.jpg" width="418" height="65" alt="PharmakonDocs" border="0"></a></td>
+			 </cfdefaultcase>
+		   </cfswitch>
+            
+			<td><img src="/images/LogoPic1.jpg" width="128" height="65" alt="" border="0"></td>
+			<td><img src="/images/logoPic2.jpg" width="146" height="65" alt="" border="0"></td>
+			<td><img src="/images/LogoPic3.jpg" width="108" height="65" alt="" border="0"></td>
+         </tr>
+		 <tr>
+		   <td colspan=4 >
+		      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+				   <cfswitch expression="#Attributes.logoDisplay#">
+				     <cfcase value="M">
+					    <td width="307"><a href="index.cfm"><img src="/images/pharmakon_bottom.jpg" width="307" height="19" alt="Pharmakon, LLC. A PDI Company" border="0"></a></td>
+					 </cfcase>
+					 <cfcase value="G">
+					    <td width="307"><a href="index.cfm"><img src="/images/GroupDyn_bottom.jpg" width="307" height="19" alt="Group Dynamics, LLC." border="0"></a></td>
+					 </cfcase>
+					 <cfcase value="S">
+					    <td width="307"><a href="index.cfm"><img src="/images/sharecom_bottom.jpg" width="307" height="19" alt="Sharecom, LLC." border="0"></a></td>
+					 </cfcase>
+					 <cfcase value="V">
+					    <td width="307"><a href="index.cfm"><img src="/images/vistacom_bottom.jpg" width="307" height="19" alt="Vistacom, LLC." border="0"></a></td>
+					 </cfcase>
+					 <cfcase value="C">
+					    <td width="307"><a href="index.cfm"><img src="/images/cbeck_bottom.jpg" width="307" height="19" alt="C. Beck & Associates, LLC." border="0"></a></td>
+					 </cfcase>
+					 <cfcase value="O">
+					    <td width="307"><a href="index.cfm"><img src="/images/mod_bottom.jpg" width="307" height="19" alt="C. Beck & Associates, LLC." border="0"></a></td>
+					 </cfcase>
+					 
+					 <cfdefaultcase>
+					    <td width="307"><a href="index.cfm"><img src="/images/pharmakon_bottom.jpg" width="307" height="19" alt="Pharmakon. LLC." border="0"></a></td>
+					 </cfdefaultcase>
+				   </cfswitch>
+				   <td background="/images/navbg.gif" wdith="100%">
+				    <cfif Attributes.siteType EQ "P">
+				     <table border="0" cellpadding="0" cellspacing="0">
+		               <tr>
+		                   <td><a href="dsp_aboutus.cfm"><img name="about" src="/images/nav_aboutus_off.gif" alt="" border="0" onmouseover="this.src='/images/nav_aboutus_on.gif'" onmouseout="this.src='/images/nav_aboutus_off.gif'"></a></td>
+						   <td><img src="/images/navDivider.gif" alt="" border="0"></td>
+						   <td><a href="dsp_aboutus.cfm"><img name="online" src="/images/nav_onlinematerials_off.gif" alt="" border="0" onmouseover="this.src='/images/nav_onlinematerials_on.gif'" onmouseout="this.src='/images/nav_onlinematerials_off.gif'"></a></td>
+						   <td><img src="/images/navDivider.gif" alt="" border="0"></td>
+						   <td><a href="comingsoon.cfm"><img name="program" src="/images/nav_programregistration_off.gif" alt="" border="0" onmouseover="this.src='/images/nav_programregistration_on.gif'" onmouseout="this.src='/images/nav_programregistration_off.gif'"></a></td>
+						   <td><img src="/images/navDivider.gif" alt="" border="0"></td>
+						   <td><a href="comingsoon.cfm"><img name="honoraria" src="/images/nav_honorariaRed_off.gif" alt="" border="0" onmouseover="this.src='/images/nav_honorariaRed_on.gif'" onmouseout="this.src='/images/nav_honorariaRed_off.gif'"></a></td>
+		               </tr>
+		             </table>
+					<cfelse>
+					  &nbsp;            
+					</cfif> 
+				   </td>
+		       </tr>
+             </table>           
+		   </td>
+		 </tr>
+      </table> 
